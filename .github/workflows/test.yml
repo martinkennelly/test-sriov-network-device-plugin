@@ -18,5 +18,8 @@ jobs:
       - name: Check out code into the Go module directory
         uses: actions/checkout@v2
 
+      - name: Install hwdata
+        run: sudo apt-get install hwdata -y
+
       - name: Go test
         run: make test
