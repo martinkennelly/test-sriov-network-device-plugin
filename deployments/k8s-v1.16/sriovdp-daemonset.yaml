@@ -25,7 +25,6 @@ spec:
         tier: node
         app: sriovdp
     spec:
-      hostNetwork: true
       nodeSelector:
         beta.kubernetes.io/arch: amd64
       tolerations:
@@ -90,7 +89,6 @@ spec:
         tier: node
         app: sriovdp
     spec:
-      hostNetwork: true
       nodeSelector:
         beta.kubernetes.io/arch: ppc64le
       tolerations:
@@ -154,7 +152,6 @@ spec:
         tier: node
         app: sriovdp
     spec:
-      hostNetwork: true
       nodeSelector:
         beta.kubernetes.io/arch: arm64
       tolerations:
