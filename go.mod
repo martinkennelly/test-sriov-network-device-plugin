@@ -1,4 +1,4 @@
-module github.com/k8snetworkplumbingwg/sriov-network-device-plugin
+module gopkg.in/martinkennelly/sriov-network-device-plugin.v3
 
 go 1.13
 
