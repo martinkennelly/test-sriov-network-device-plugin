@@ -1,0 +1,25 @@
+name: review-assistance.yml
+
+on:
+  push:
+  pull_request:
+
+jobs:
+
+  go-check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.16
+
+    # if this fails, run go mod tidy
+    - name: Check if modules file are consistent with code
+      run: go mod tidy && git diff --exit-code
+
+    # if this fails, run go mod vendor
+    - name: Check if vendor directory is consistent with go modules
+      run: go mod vendor && git diff --exit-code
